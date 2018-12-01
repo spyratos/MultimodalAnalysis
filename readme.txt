@@ -1,1 +1,1 @@
-Just a readme file to initialize repo
+Just a readme file to initialize repo. Simple changes to ckeck git.
