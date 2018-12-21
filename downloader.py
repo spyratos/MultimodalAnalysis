@@ -30,7 +30,7 @@ def main():
     }
     with youtube_dl.YoutubeDL(options) as ydl:
         for i in range(len(df)):
-            if df['Label'][i]=='positive':
+            if df['Label'][i]=='agreement':
                 ydl.download([str(df['url'][i])])
                 
                 
@@ -49,7 +49,7 @@ def main():
     }
     with youtube_dl.YoutubeDL(options) as ydl:
         for i in range(len(df)):
-            if df['Label'][i]=='negative':
+            if df['Label'][i]=='disagreement':
                 ydl.download([str(df['url'][i])])
             
          
