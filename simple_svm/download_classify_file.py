@@ -17,9 +17,9 @@ def main():
    
   
     
-    os.system('youtube-dl --extract-audio --audio-format mp3 -o "/home/kostis/Desktop/MultimodalAnalysis1/toclassify/%(id)s.%(ext)s" ' + url)
+    os.system('youtube-dl --extract-audio --audio-format mp3 -o "/home/kostis/Desktop/MultimodalAnalysis/simple_svm/toclassify/%(id)s.%(ext)s" ' + url)
      
-    os.system('python audioAnalysis.py classifyFolder -i /home/kostis/Desktop/MultimodalAnalysis1/toclassify/ --model svm --classifier /home/kostis/Desktop/MultimodalAnalysis1/svm_inter --details')
+    os.system('python audioAnalysis.py classifyFolder -i /home/kostis/Desktop/MultimodalAnalysis/simple_svm/toclassify/ --model svm --classifier /home/kostis/Desktop/MultimodalAnalysis/svm_inter --details')
     
 
   
