@@ -8,7 +8,6 @@ then use classifier_interviews.py to train a classifier with the url's downloade
 
 then use download_classify_file.py to classify a single file (url) with the above classifier
 
-..
 
 ###from_scratch Folder
 
