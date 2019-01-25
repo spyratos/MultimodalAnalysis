@@ -11,15 +11,15 @@ Created on Fri Nov 30 09:57:19 2018
 @author: kostis
 """
 def main():
-    user_input = input("Enter ID of youtube video: ")
-    url='https://www.youtube.com/watch?v='+user_input
+    url = raw_input("Enter url of youtube video: ")
+    #url='https://www.youtube.com/watch?v='+user_input
     
    
   
     
     os.system('youtube-dl --extract-audio --audio-format mp3 -o "/home/kostis/Desktop/MultimodalAnalysis/simple_svm/toclassify/%(id)s.%(ext)s" ' + url)
      
-    os.system('python audioAnalysis.py classifyFolder -i /home/kostis/Desktop/MultimodalAnalysis/simple_svm/toclassify/ --model svm --classifier /home/kostis/Desktop/MultimodalAnalysis/svm_inter --details')
+    os.system('python audioAnalysis.py classifyFolder -i /home/kostis/Desktop/MultimodalAnalysis/simple_svm/toclassify/ --model svm --classifier /home/kostis/Desktop/MultimodalAnalysis/simple_svm/svm_inter --details')
     
 
   
