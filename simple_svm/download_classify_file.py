@@ -4,25 +4,34 @@ Created on Fri Nov 30 09:57:19 2018
 
 @author: kostis
 """
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Nov 30 09:57:19 2018
-
-@author: kostis
-"""
 def main():
-    user_input = input("Enter ID of youtube video: ")
-    url='https://www.youtube.com/watch?v='+user_input
     
+        
    
-  
-    
-    os.system('youtube-dl --extract-audio --audio-format mp3 -o "/home/kostis/Desktop/MultimodalAnalysis/simple_svm/toclassify/%(id)s.%(ext)s" ' + url)
-     
-    os.system('python audioAnalysis.py classifyFolder -i /home/kostis/Desktop/MultimodalAnalysis/simple_svm/toclassify/ --model svm --classifier /home/kostis/Desktop/MultimodalAnalysis/svm_inter --details')
-    
 
-  
+
+    df=pd.read_csv('/home/kostis/Desktop/MultimodalAnalysis1/train.csv')
+
+
+    #for i in range(len(df)):
+    #   song=df['url'][i]
+    #   os.system('youtube-dl --extract-audio --audio-format mp3 -o "/home/kostis/Desktop/MultimodalAnalysis1/toclassify/%(id)s.%(ext)s" ' + song)
+
+
+	 
+    
+    predicted=aA.classifyFolderWrapper("/home/kostis/Desktop/MultimodalAnalysis1/toclassify/","svm","/home/kostis/Desktop/MultimodalAnalysis1/svm_inter",outputMode=True)
+    df['id'] = df['url'].str.extract('v=([^&]*)', expand=True)
+    actual=[]
+    pred=[]
+    for i in range(len(df)):
+        actual.append(df['Label'][i])
+        pred.append(predicted[df['id'][i]])
+    print(actual)
+    print("\n")
+    print(pred)
+    print accuracy_score(actual, pred)
+
 if __name__ == "__main__":
     import youtube_dl
     import pandas as pd
@@ -31,7 +40,8 @@ if __name__ == "__main__":
     import os.path
     from pathlib import Path, PureWindowsPath
     import sys
-    from pyAudioAnalysis import audioTrainTest as aT
+    from sklearn.metrics import accuracy_score
+    from pyAudioAnalysis import audioAnalysis as aA
     main()
-    
+
     
