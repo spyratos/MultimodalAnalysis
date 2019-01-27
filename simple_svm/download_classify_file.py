@@ -13,9 +13,9 @@ def main():
     df=pd.read_csv('/home/kostis/Desktop/MultimodalAnalysis1/train.csv')
 
 
-    #for i in range(len(df)):
-    #   song=df['url'][i]
-    #   os.system('youtube-dl --extract-audio --audio-format mp3 -o "/home/kostis/Desktop/MultimodalAnalysis1/toclassify/%(id)s.%(ext)s" ' + song)
+    for i in range(len(df)):
+       song=df['url'][i]
+       os.system('youtube-dl --extract-audio --audio-format wav -o "/home/kostis/Desktop/MultimodalAnalysis1/toclassify/%(id)s.%(ext)s" ' + song)
 
 
 	 
