@@ -138,7 +138,7 @@ def classifyFolderWrapper(inputFolder, model_type, model_name,
         if outputMode:
             print("{0:s}\t{1:s}".format(wavFile, classNames[Result]))
             import re
-            p = re.compile("toclassify[/]([^.]*?)\.mp3")
+            p = re.compile("toclassify[/]([^.]*?)\..*")
             text=p.search(wavFile).group(1)
             res_ret[text]=classNames[Result]
     Results = numpy.array(Results)

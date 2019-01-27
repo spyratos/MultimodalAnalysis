@@ -10,7 +10,7 @@ def main():
    
 
 
-    df=pd.read_csv('/home/kostis/Desktop/MultimodalAnalysis1/train.csv')
+    df=pd.read_csv('/home/kostis/Desktop/MultimodalAnalysis1/test.csv')
 
 
     for i in range(len(df)):
@@ -20,10 +20,11 @@ def main():
 
 	 
     
-    predicted=aA.classifyFolderWrapper("/home/kostis/Desktop/MultimodalAnalysis1/toclassify/","svm","/home/kostis/Desktop/MultimodalAnalysis1/svm_inter",outputMode=True)
+    predicted=aA.classifyFolderWrapper("/home/kostis/Desktop/MultimodalAnalysis1/toclassify1/","svm","/home/kostis/Desktop/MultimodalAnalysis1/svm_inter",outputMode=True)
     df['id'] = df['url'].str.extract('v=([^&]*)', expand=True)
     actual=[]
     pred=[]
+    print(df.head())
     for i in range(len(df)):
         actual.append(df['Label'][i])
         pred.append(predicted[df['id'][i]])
