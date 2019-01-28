@@ -1,0 +1,30 @@
+classifier,Best train accuracy,best train f1,Test accuracy,best C,,,,
+svm,88.20%,88.20%,100.00%,10,,Gradient Boosting,,
+extra trees,87.30%,87.30%,100.00%,500,,Confusion Matrix:,,
+random forest,84.80%,84.80%,94.73%,50,,,neg,pos
+gradient boosting,82.30%,82.30%,94.73%,500,,neg,39.39,10.61
+knn,81.70%,81.50%,84.21%,1,,pos,7.06,42.94
+,,,,,,,,
+,,,,,,Random Forest,,
+,,,,,,Confusion Matrix:,,
+,,,,,,,neg,pos
+,,,,,,neg,41.56,8.44
+,,,,,,pos,6.78,43.22
+,,,,,,,,
+,,,,,,SVM,,
+,,,,,,Confusion Matrix:,,
+,,,,,,,neg,pos
+,,,,,,neg,43.56,6.44
+,,,,,,pos,5.39,44.61
+,,,,,,,,
+,,,,,,KNN,,
+,,,,,,Confusion Matrix:,,
+,,,,,,,neg,pos
+,,,,,,neg,35.83,14.17
+,,,,,,pos,4.17,45.83
+,,,,,,,,
+,,,,,,Extra Trees,,
+,,,,,,Confusion Matrix:,,
+,,,,,,,neg,pos
+,,,,,,neg,42.78,7.22
+,,,,,,pos,5.44,44.56

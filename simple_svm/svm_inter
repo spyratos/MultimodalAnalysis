@@ -127,7 +127,7 @@ Rp51
 tp52
 g21
 I00
-S'3\xb2\xd0P\xde\x95\xeb\xbf'
+S'\xc24\x1cS\x0f\x17\xe7\xbf'
 p53
 tp54
 bsS'_sparse'
@@ -193,7 +193,7 @@ cnumpy.core._multiarray_umath
 scalar
 p79
 (g21
-S'\x00\x00\x00\x00\x00\x004@'
+S'\x00\x00\x00\x00\x00\x00$@'
 p80
 tp81
 Rp82
@@ -297,7 +297,7 @@ Rp120
 tp121
 g21
 I00
-S'7T\x8a\xeb\x8c\x03\xa4\xbf'
+S'\xbd\xf4\x81=A\x1a\xc1\xbf'
 p122
 tp123
 bsS'cache_size'
