@@ -6,7 +6,11 @@ Created on Fri Nov 30 09:40:10 2018
 """
 
 def main():
-    aT.featureAndTrain(['/home/kostis/Desktop/MultimodalAnalysis1/negative','/home/kostis/Desktop/MultimodalAnalysis1/positive'], 1.0, 1.0, aT.shortTermWindow, aT.shortTermStep, "gradientboosting", "gradientboosting_inter")
+	mtwin=float(raw_input('Enter mid term window:'))
+	mtmove=float(raw_input('Enter mid term step:'))
+	stwin=float(raw_input('Enter short term window:'))
+	stmove=float(raw_input('Enter short term step:'))
+	aT.featureAndTrain(['/home/kostis/Desktop/MultimodalAnalysis/negative','/home/kostis/Desktop/MultimodalAnalysis/positive'], mtwin, mtmove, stwin, stmove, "gradientboosting", "gradientboosting_inter")
 
 if __name__ == "__main__":
     import youtube_dl
